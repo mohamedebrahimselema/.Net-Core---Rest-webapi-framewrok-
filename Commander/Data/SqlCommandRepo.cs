@@ -11,11 +11,26 @@ namespace Commander.Data{
         {
             this._context = context;
         }
+
+        public void CreateCommand(Command cmd)
+        {
+            if(cmd == null)
+            {
+            throw new System.ArgumentNullException();
+            }
+            _context.Add(cmd);
+        }
+
         public IEnumerable<Command> GetAppCommands()
         {
             return _context.Commands.ToList();
         }
 
         public Command GetCommandById(int Id) => _context.Commands.FirstOrDefault(x => x.Id == Id);
+
+        public bool SaveChanges()
+        {
+            return (_context.SaveChanges()>0);
+        }
     }
 }

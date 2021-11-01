@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Commander.Models;
 
 namespace Commander.Data{
-    public class MockCommanderRepo : ICommandRepo
+    public class MockCommanderRepo 
     {
         public IEnumerable<Command> GetAppCommands()
         {

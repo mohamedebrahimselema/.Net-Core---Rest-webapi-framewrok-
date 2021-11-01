@@ -30,6 +30,15 @@ namespace commander.Controllers{
             var commands = _repo.GetAppCommands();
             return Ok(_mapper.Map<IEnumerable<CommandReadDto>>(commands));
         }
+        [HttpPost]
+        public ActionResult<CommandCreateDto> CreateCommand(CommandCreateDto commandCreateDto){
+            var commandModel = _mapper.Map<Command>(commandCreateDto);
+            _repo.CreateCommand(commandModel);
+
+            _repo.SaveChanges();
+            var commandRead = _mapper.Map<CommandReadDto>(commandModel);
+            return Ok(commandModel);
+        }
     }
 
 }
