@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\S3\\.Net Core - create rest api framework from scratch\\Commander\\Commander.csproj": {}
+    "D:\\S3\\.Net Core - create rest api framework from scratch\\commander\\Commander.csproj": {}
   },
   "projects": {
-    "D:\\S3\\.Net Core - create rest api framework from scratch\\Commander\\Commander.csproj": {
+    "D:\\S3\\.Net Core - create rest api framework from scratch\\commander\\Commander.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\S3\\.Net Core - create rest api framework from scratch\\Commander\\Commander.csproj",
+        "projectUniqueName": "D:\\S3\\.Net Core - create rest api framework from scratch\\commander\\Commander.csproj",
         "projectName": "Commander",
-        "projectPath": "D:\\S3\\.Net Core - create rest api framework from scratch\\Commander\\Commander.csproj",
+        "projectPath": "D:\\S3\\.Net Core - create rest api framework from scratch\\commander\\Commander.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\S3\\.Net Core - create rest api framework from scratch\\Commander\\obj\\",
+        "outputPath": "D:\\S3\\.Net Core - create rest api framework from scratch\\commander\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,24 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
