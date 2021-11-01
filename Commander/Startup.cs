@@ -30,13 +30,18 @@ namespace Commander
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+                     services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Commander", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "commander", Version = "v1" });
             });
             services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer
             (Configuration.GetConnectionString("CommanderConnection")));
+
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+          //  services.AddScoped<ICommandRepo,MockCommanderRepo>();
             services.AddScoped<ICommandRepo,SqlCommandRepo>();
         }
 
